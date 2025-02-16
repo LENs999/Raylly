@@ -1,4 +1,4 @@
-const dataDeInicio = new Date('2025-01-02T00:00:00'); // Coloque a data do início do relacionamento
+const dataDeInicio = new Date('2025-01-29T00:00:00'); // Coloque a data do início do relacionamento
 const countdownElement = document.getElementById('countdown');
 
 function atualizarContagem() {
