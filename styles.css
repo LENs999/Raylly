@@ -1,0 +1,279 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte padrão para o corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #FFB6C1, #FFD700); /* Gradiente de fundo suave */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Container geral */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do header */
+header {
+    background-color: #ff66b2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilo da seção de contagem */
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Estilo das fotos */
+.photos {
+    margin-top: 50px;
+}
+
+.photos h2 {
+    font-size: 28px;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll; /* Habilita o scroll horizontal */
+    padding: 10px 0;
+    scroll-snap-type: x mandatory; /* Faz com que o scroll "pule" de uma foto para a próxima */
+    -webkit-overflow-scrolling: touch; /* Melhor performance em dispositivos móveis */
+}
+
+.photo-gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    scroll-snap-align: center; /* Faz com que as imagens se alinhem no centro */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo da mensagem especial */
+.message {
+    margin-top: 60px;
+}
+
+.message h2 {
+    font-size: 28px;
+    color: #ff66b2;
+}
+
+.message p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ff66b2;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff3385;
+}
+
+/* Estilo do footer */
+footer {
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 24px;
+    color: #ff66b2;
+}
+
+/* Animação no carregamento do site */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    /* Ajuste no título */
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    /* Ajuste no contador de tempo */
+    .counter {
+        font-size: 20px;
+    }
+
+    /* Ajuste nas fotos */
+    .photo-gallery img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Ajuste na mensagem especial */
+    .message h2 {
+        font-size: 24px;
+    }
+
+    .message p {
+        font-size: 16px;
+    }
+
+    /* Ajuste no botão */
+    .button {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    /* Ajuste no footer */
+    footer h3 {
+        font-size: 20px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (celulares em retrato) */
+@media (max-width: 480px) {
+    /* Ajuste no título */
+    header h1 {
+        font-size: 26px;
+    }
+
+    /* Ajuste nas fotos */
+    .photo-gallery img {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* Ajuste na mensagem especial */
+    .message h2 {
+        font-size: 22px;
+    }
+
+    .message p {
+        font-size: 14px;
+    }
+
+    /* Ajuste no botão */
+    .button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.heart {
+    font-size: 30px;
+    color: #ff66b2;
+    animation: heartbeat 1.5s infinite;
+}
+body {
+    background: linear-gradient(135deg, #FFB6C1, #FFD700); /* Gradiente inicial */
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #FFB6C1, #FFD700);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    }
+    100% {
+        background: linear-gradient(135deg, #FFB6C1, #FFD700);
+    }
+}
+@keyframes sparkle {
+    0% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sparkle 2s ease infinite;
+}
+
+.sparkle span {
+    font-size: 20px;
+    color: #ff66b2;
+    animation: sparkle 3s infinite ease-in-out;
+    opacity: 0;
+}
